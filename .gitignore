@@ -1,3 +1,11 @@
+# spectrum-ui-vue-starter configuration
+#
+# `public` dir for static files with git-ignored `public/spectrum-css` folder
+# this approach enables HMR development with required CSS and SVG resources
+# resources will be copied on npm 'prepare' hook after npm install
+# see `./prepare-public.js`
+/public/spectrum-css
+
 .DS_Store
 node_modules
 /dist
