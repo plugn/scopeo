@@ -12,6 +12,7 @@ import container from 'markdown-it-container'
 import abbr from 'markdown-it-abbr'
 
 import 'prismjs/components/prism-markup'
+import 'prismjs/components/prism-yaml'
 import 'prismjs/components/prism-css'
 import 'prismjs/components/prism-scss'
 import 'prismjs/components/prism-clike'

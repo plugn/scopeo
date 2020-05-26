@@ -1,5 +1,5 @@
 <template>
-  <div class="ui-page flex hbox main-start cross-start">
+  <div class="flex hbox main-start cross-start">
     <div class="vbox">
       <SideNav
         multilevel
