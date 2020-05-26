@@ -21,8 +21,6 @@ import 'prismjs/components/prism-js-extras'
 import 'prismjs/components/prism-bash'
 import 'prismjs/components/prism-shell-session'
 
-// const stringify = (src) => JSON.stringify(src).replace(/\u2028/g, '\\u2028').replace(/\u2029/g, '\\u2029')
-
 function renderMD(src = '') {
   const md = new MarkdownIt({
     html: true,
@@ -42,14 +40,11 @@ function renderMD(src = '') {
       validate: function(params) {
         return params.trim().match(/^spoiler\s+(.*)$/);
       },
-
       render: function (tokens, idx) {
         let m = tokens[idx].info.trim().match(/^spoiler\s+(.*)$/);
-
         if (tokens[idx].nesting === 1) {
           // opening tag
           return '<details><summary>' + md.utils.escapeHtml(m[1]) + '</summary>\n';
-
         } else {
           // closing tag
           return '</details>\n';

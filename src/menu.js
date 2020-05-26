@@ -5,13 +5,17 @@ export default [
     to: '/',
   },
   {
-    label: 'Icon',
-    to: '/view/Icon',
+    label: 'Getting Started',
+    to: '/article/Start',
   },
   {
-    label: 'Buttons',
+    label: 'Samples',
     iconName: 'Button',
     $children: [
+      {
+        label: 'Icon',
+        to: '/view/Icon',
+      },
       {
         label: 'ActionButton',
         to: '/view/ActionButton'
@@ -23,17 +27,8 @@ export default [
     ]
   },
   {
-    label: 'Lists',
-    iconName: 'ViewList',
-    disabled: true,
-  },
-  {
-    label: 'Markdown Features',
+    label: 'Markdown',
     to: '/article/MdSample'
   },
-  // {
-  //   label: 'Markdown Styles',
-  //   to: '/article/Text'
-  // },
 
 ]
