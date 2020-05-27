@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Show from '../views/Show'
+import Sample from '../views/Sample'
 import Docs from '../views/Docs'
 
 Vue.use(VueRouter)
@@ -8,7 +8,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/view/:component',
-    component: Show,
+    component: Sample,
   },
   {
     path: '/article/:article',

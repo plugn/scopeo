@@ -9,6 +9,10 @@ export default [
     to: '/article/Start',
   },
   {
+    label: 'Includes',
+    to: '/article/Includes',
+  },
+  {
     label: 'Samples',
     iconName: 'Button',
     $children: [
@@ -30,5 +34,4 @@ export default [
     label: 'Markdown',
     to: '/article/MdSample'
   },
-
 ]

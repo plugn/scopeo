@@ -1,14 +1,10 @@
 import Vue from "vue";
-import SpectrumUIVue from 'spectrum-ui-vue'
 // Reference array sent to dynamic staticRenderFns
 let staticRenderFns = []
 
 export default {
   props: {
     template: String
-  },
-  components: {
-    ...SpectrumUIVue,
   },
   data() {
     return {
@@ -21,6 +17,9 @@ export default {
     } else { // If there is a template, I'll show it
       return this.templateRender();
     }
+  },
+  created() {
+    this.$options.components = this.$root.$options.components
   },
   watch: {
     // Every time the template prop changes, I recompile it to update the DOM

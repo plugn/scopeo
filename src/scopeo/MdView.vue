@@ -3,7 +3,6 @@
 </template>
 
 <script>
-import SpectrumUIVue from 'spectrum-ui-vue'
 import domTransform from './domTransforms'
 import Renderer from './Renderer'
 import { frontMark } from './frontMark'
@@ -13,6 +12,10 @@ export default {
   name: 'MdView',
   props: {
     article: {
+      type: String,
+      default: '',
+    },
+    markdown: {
       type: String,
       default: '',
     },
@@ -31,7 +34,6 @@ export default {
   },
   components: {
     Renderer,
-    ...SpectrumUIVue,
   },
   data() {
     return {
@@ -42,6 +44,12 @@ export default {
     domTransform,
     setTemplate(html, params) {
       this.template = this.domTransform(html || this.html, params || this.params)
+    },
+    setMarkdown(source) {
+      const result = frontMark(source.default)
+      if (result) {
+        this.setTemplate(result.html, result.attributes)
+      }
     },
     async setArticle(article) {
       article = article || config.defaultArticle
@@ -56,6 +64,9 @@ export default {
   mounted() {
     if (this.html) {
       this.setTemplate()
+    }
+    else if (this.markdown) {
+      this.setMarkdown(this.markdown)
     }
     else {
       this.setArticle(this.article)
@@ -75,6 +86,14 @@ export default {
       handler(value) {
         if (typeof value === 'string') {
           this.setTemplate(value)
+        }
+      }
+    },
+    markdown: {
+      immediate: false,
+      handler(value) {
+        if (typeof value === 'string') {
+          this.setMarkdown(value)
         }
       }
     },

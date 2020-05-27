@@ -13,6 +13,3 @@ powered by [Spectrum-UI-Vue](https://www.npmjs.com/package/spectrum-ui-vue)
 * Dark theme as default
 * 4 color schemes (switching not implemented yet)  
 * Live code examples with `vue-live`
-
-### [How to start](/article/Start)
-

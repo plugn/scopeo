@@ -12,16 +12,14 @@ npm install
 npm run dev
 ```
 
-
-### Markdown
+#### Markdown
 Take a look at 
 * `scopeo.config.js` - where articles path is set 
 * `menu.js` - menu items configuration
 * You may want to edit `scopeo/mdRules.js` to add custom transformation rules for resulting HTML. 
 
-
-### Article
-An article starts with `Frontmatter YAML` header, where you can place custom parameters, and they will pass in transformation rule functions.
+#### Articles 
+Articles starts with `Frontmatter YAML` section, where you can place custom parameters, and they will pass in transformation rule functions.
 
 ``` yaml
 ---
@@ -35,4 +33,3 @@ images:
     maxWidth: 320px
 ---
 
-```

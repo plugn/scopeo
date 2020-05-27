@@ -10,13 +10,8 @@
 </template>
 
 <script>
-import MdView from '../scopeo/MdView'
-
 export default {
   name: 'Docs',
-  components: {
-    MdView,
-  },
   data() {
     return {
       article: '',
