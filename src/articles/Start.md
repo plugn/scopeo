@@ -32,4 +32,4 @@ images:
   style:
     maxWidth: 320px
 ---
-
+```
