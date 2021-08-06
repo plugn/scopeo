@@ -1,4 +1,4 @@
-# Voltage
+# Scopeo
 
 Fast Documentation App Starter
 powered by Spectrum-UI-Vue
